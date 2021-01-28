@@ -2,13 +2,16 @@
 session_start();
 ini_set( 'display_errors', 1 );
 
-$data = $this->request->input('json_decode');
+header('Content-Type: application/json; charset=utf-8');
 
-var_dump($data);
-exit();
-$title = $_POST['config']['data']['title'];
+$title = $_POST['title'];
 $contents = $_POST['contents'];
 $uid = $_SESSION['uid'];
+
+// var_dump($title);
+// var_dump($contents);
+// exit();
+
 
 // DB接続の設定
 include('../functions.php');

@@ -8,7 +8,7 @@ $uid = $_SESSION['uid'];
 $pdo = connect_to_db();
 
 // データ取得SQL作成
-$sql = 'SELECT * FROM consumer WHERE id=:uid';   
+$sql = 'SELECT * FROM consumer WHERE id=:uid';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);

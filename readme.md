@@ -14,8 +14,8 @@
 
 ## ログイン情報
 - ユーザー
-email：kkkk@gmail.com
-password：123456
+  email：kkkk@gmail.com
+  password：123456
 - 販売員
-email：lolo@gmail.com
-password：567890
+  email：lolo@gmail.com
+  password：567890

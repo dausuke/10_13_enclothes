@@ -177,6 +177,10 @@ ul{
     text-align: center;
 }
 .question-title {
+    width: 600px;
+	overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
     font-size: 2rem;
     color: rgb(0, 68, 255);
 }
@@ -189,8 +193,14 @@ ul{
     right: 0;
     bottom: 0;
 }
-/* 相談投稿画面 */
 .question-content{
+    width: 600px;
+	overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/* 相談投稿画面 */
+.post-questioncontent{
     display: flex;
     justify-content: center;
     align-items: center;

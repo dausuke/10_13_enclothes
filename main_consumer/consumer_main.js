@@ -113,25 +113,24 @@ const questions_page = {
             });
     },
 };
-//プロフィール編集画面
+//相談投稿画面
 const creat_question_page = {
     data: function () {
         return {
-            title:null,
-            contents:null,
+            title: null,
+            contents: null,
             errorMessage: '通信エラーが発生しました',
         };
     },
     template: `
         <div class="question-post">
             <form>
-                <fieldset class="question-content">
+                <fieldset class="post-questioncontent">
                     <div class="form-group question-item">
-                        <input type="text" name="question-title" class="form-control" v-model="title" placeholder="相談のタイトルを１０文字以上１００文字未満で記入してください" >
+                        <input type="text" class="form-control" v-model="title" placeholder="相談のタイトルを１０文字以上１００文字未満で記入してください" >
                     </div>
                     <div class="form-group question-item">
-                        <textarea class="form-control" name="question-contents" v-model="contents" rows="10"></textarea>
-                        <input type="hidden" name="uid" value="<?=$uid?>">
+                        <textarea class="form-control" v-model="contents" placeholder="相談の内容を５００文字未満で記入してください" rows="10"></textarea>
                     </div>
                     <div class="form-group question-item">
                         <button type="button" class="send-question form-control" v-on:click="creatQuestion"><i class="fas fa-edit"></i>相談する</button>
@@ -142,13 +141,13 @@ const creat_question_page = {
     `,
     methods: {
         creatQuestion: function () {
+            const params = new URLSearchParams();
+            params.append('title', this.title);
+            params.append('contents', this.contents);
             axios
-                .post('creat_question.php',{
-                    title:this.title,
-                    contents:this.contents
-                })
+                .post('creat_question.php', params)
                 .then(function (res) {
-                    console.log(res)
+                    console.log(res);
                     alert('相談を投稿しました')
                 })
                 .catch(function () {
