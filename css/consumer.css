@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 70%;
+    height: 100%;
+    /* display: flex!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #464c56;
+    color: white;
+    border-bottom: 1px solid #333;
+}
+ul{
+    list-style: none!important;
+}
+.header-content{
+    margin: 0 auto;
+    width: 70%;
+    border-right: 1px solid #545b66;
+    border-left: 1px solid #545b66;
+    position: relative;
+}
+.header-content p{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    display:inline-block;
+    margin: 0 0 0.5rem 1rem;
+}
+.action{
+    display: inline-flex;
+    position: absolute;
+    right: 3%;
+}
+.signout{
+    height: 3rem;
+    width: 8rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.signout:hover{
+    background-color: rgb(39, 38, 38);
+}
+/* ホーム画面 */
+.navbar {
+    position: fixed;
+    top: 13%;
+    left: 0;
+    padding: 0 0 0 1rem;
+    width: 10rem;
+}
+.check-answer{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #12c74b;
+    border: #12c74b;
+    border-radius: 5px;
+    position: absolute;
+    right: 20%;
+    top: 15%;
+}
+.check-salesperson{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #12c74b;
+    border: #12c74b;
+    border-radius: 5px;
+    position: absolute;
+    right: 35%;
+    top: 15%;
+}
+.check-answer:hover{
+    background-color: #12c74bbb;
+}
+.check-salesperson:hover{
+    background-color: #12c74bbb;
+}
+#main-content{
+    width: 100%;
+}
+.component{
+    margin-top: 5%;
+}
+.home-title{
+    text-align: center;
+}
+/* 販売員一覧画面 */
+.salesperson-list{
+    display: block;
+    list-style: none;
+    width:100%;
+    margin: 5% 0 0 0 ;
+    padding: 0;
+
+}
+.salesperson-contnt{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin:2rem auto;
+    padding: 1rem 0 1rem 0;
+    position: relative;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.jump-salesperson-page{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #12c74b;
+    border: #12c74b;
+    border-radius: 5px;
+}
+.jump-salesperson-page:hover{
+    background-color: #12c74bbb;
+}
+/* 相談一覧画面 */
+.answer-area{
+    width: 100%;
+    margin: 3rem 0 0 0;
+}
+.answer-content{
+    display: none;
+}
+.answer-content.active{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+.answer-content ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.question-Area{
+    display: flex;
+    justify-content: flex-start;
+    border-top: lightgrey solid 1px;
+    padding: 0;
+    position: relative;
+}
+.titlearea{
+    display: flex;
+    justify-content: center;
+}
+.question-stateArea{
+    margin-right: 3rem;
+    text-align: center;
+}
+.question-title {
+    font-size: 2rem;
+    color: rgb(0, 68, 255);
+}
+.question-title:hover {
+    color: rgba(0, 68, 255, 0.582);
+    text-decoration: underline rgba(0, 68, 255, 0.582);
+}
+.question-date{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* 相談投稿画面 */
+.question-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.question-item{
+    width: 100%;
+}
+.send-question{
+    width: 30%;
+    margin: 0 auto;
+}
