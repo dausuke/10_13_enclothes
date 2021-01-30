@@ -9,7 +9,8 @@ $pdo = connect_to_db();
 $uid = $_SESSION['uid'];
 
 // データ取得SQL作成
-$sql = 'SELECT * FROM question WHERE consumer_id=:uid';
+$sql = 'SELECT * FROM question LEFT OUTER JOIN (SELECT question_id,COUNT(id) AS cnt FROM answers GROUP BY question_id
+) AS state ON question.id = state.question_id WHERE consumer_id=:uid';
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':uid', $uid, PDO::PARAM_STR);

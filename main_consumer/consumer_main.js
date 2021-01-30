@@ -105,7 +105,8 @@ const questions_page = {
                             <div class='question-stateArea'>
                                 <dl>
                                     <dt>回答</dt>
-                                    <dd>{{questionDataItem.answers}}</dd>
+                                    <dd v-if="questionDataItem.cnt>0">{{questionDataItem.cnt}}</dd>
+                                    <dd v-else>0</dd>
                                 </dl>
                             </div>
                             <div class='question-contentArea'>
