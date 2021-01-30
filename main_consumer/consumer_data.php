@@ -8,7 +8,8 @@ $uid = $_SESSION['uid'];
 $pdo = connect_to_db();
 
 // データ取得SQL作成
-$sql = 'SELECT * FROM consumer WHERE id=:uid';
+// $sql = 'SELECT * FROM consumer WHERE id=:uid';
+$sql = 'SELECT * FROM consumer LEFT OUTER JOIN (SELECT consumer_id,COUNT(id) AS cnt FROM question GROUP BY consumer_id ) AS consumer_state ON consumer.id = consumer_state.consumer_id';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);

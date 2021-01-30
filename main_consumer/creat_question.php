@@ -17,7 +17,7 @@ $uid = $_SESSION['uid'];
 include('../functions.php');
 $pdo = connect_to_db();
 
-$sql = 'INSERT INTO question(id,uid,title,contents,answers,solved,created_at)VALUES(NULL,:uid,:title,:contents,0,0,sysdate())';
+$sql = 'INSERT INTO question(id,consumer_id,title,contents,solved,created_at)VALUES(NULL,:uid,:title,:contents,0,sysdate())';
 $stmt = $pdo->prepare($sql);
 //バインド変数設定
 $stmt->bindValue(':uid', $uid, PDO::PARAM_STR);
